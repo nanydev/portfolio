@@ -16,6 +16,7 @@
       {
         "link-name": "off"
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
