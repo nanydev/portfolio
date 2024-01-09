@@ -17,6 +17,9 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+
+  --gradient: linear-gradient(to right #f0f #0ef );
+  
 }
 
 html {
