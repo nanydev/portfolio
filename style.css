@@ -18,13 +18,13 @@
   --text-color: #fff;
   --main-color: #0ef;
 
-  --gradient: linear-gradient(to right #f0f #0ef );
+  --gradient: linear-gradient(180deg, #f0f, #0ef);
   
 }
 
 html {
   font-size: 62.5%;
-  overflow: auto; /*colocando barra de rolagem, ezstava hidden*/
+  overflow: auto; /*colocando barra de rolagem, estava hidden*/
 }
 
 body {
