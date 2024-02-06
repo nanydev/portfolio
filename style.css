@@ -17,9 +17,8 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #FF69FF;
-  /* #0ef; */
 
-  --gradient: linear-gradient(180deg, #f0f, #0ef);
+  /* --gradient: linear-gradient(180deg, #f0f, #0ef); */
 }
 
 html {
