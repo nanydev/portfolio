@@ -16,7 +16,8 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
-  --main-color: #0ef;
+  --main-color: #FF69FF;
+  /* #0ef; */
 
   --gradient: linear-gradient(180deg, #f0f, #0ef);
 }
@@ -55,7 +56,8 @@ section {
 
 .logo {
   font-size: 2.5rem;
-  color: var(--text-color);
+  /* color: var(--text-color); */
+
   font-weight: 600;
   cursor: default;
 }
