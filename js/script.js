@@ -53,7 +53,7 @@ window.onscroll = () => {
 
 
   /*============ typed js ===============*/
-const typed = new Typed('.multiple-text', {
+const typed = new typed('.multiple-text', {
   strings: ['Desenvolvedora Front-end!' , 'Designer Web!' , 'Designer UI/UX!' ],
   typedSpeed: 100,
   backSpeed: 100,
@@ -61,3 +61,28 @@ const typed = new Typed('.multiple-text', {
   loop: true
 });
 
+
+/*====== Botão Ler Mais/Menos ======*/
+// var button = document.getElementById('btn');
+
+// button.addEventListener('click', function() {
+//   var card = document.querySelector('.about-content',);
+//   card.classList.toggle('active');
+
+//   if (card.classList.contains('active')) {
+//     return button.textContent = 'Ler Menos';
+//   }
+
+//   button.textContent = 'Ler Mais';
+// });
+
+/*======== SKILLS =============*/
+
+// Selecionar a lista de habilidades
+const skillsList = document.querySelector('.skills-lista');
+
+// Clonar os itens da lista
+const clonedItems = skillsList.cloneNode(true);
+
+// Adicionar os itens clonados ao final da lista original
+skillsList.appendChild(clonedItems);
