@@ -273,6 +273,10 @@ span {
 
 /*============= skills ==========*/
 
+.portfolio-box:last-child {
+  cursor: not-allowed;
+}
+
 .portfolio {
   background: var(--second-bg-color);
 }
