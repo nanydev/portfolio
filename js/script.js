@@ -1,42 +1,41 @@
-/*============ toggle icon navbar ===============*/
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+  /*============ toggle icon navbar ===============*/
+  let menuIcon = document.querySelector('#menu-icon');
+  let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle('bx-x');
-  navbar.classList.toggle('active');
-};
+  menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+  };
 
-/*============ scroll section active link ===============*/
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+  /*============ scroll section active link ===============*/
+  let sections = document.querySelectorAll('section');
+  let navLinks = document.querySelectorAll('header nav a');
 
-window.onscroll = () => {
-  sections.forEach(sec => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
+  window.onscroll = () => {
+    sections.forEach(sec => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
 
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach(links => {
-        links.classList.remove('active');
-        document
-          .querySelector('header nav a[href=' + id + '])')
-          .classList.add('active');
-      });
-    };
-  });
-  /*============ sticky navbar ===============*/
-  let header = document.querySelector('header');
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach(links => {
+          links.classList.remove('active');
+          document
+            .querySelector('header nav a[href=' + id + ']')
+            .classList.add('active');
+        });
+      };
+    });
+    /*============ sticky navbar ===============*/
+    let header = document.querySelector('header');
 
-  header.classList.toggle('sticky',window.scrollY > 100);
+    header.classList.toggle('sticky',window.scrollY > 100);
 
-  /*============ remove toggle icon and navbar when click navbar link (scroll)===============*/
-  menuIcon.classList.remove('bx-x');
-  navbar.classList.remove('active');
-
-};
+    /*============ remove toggle icon and navbar when click navbar link (scroll)===============*/
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+  };
 
   /*============ scroll reveal ===============*/
   ScrollReveal({ 
@@ -53,36 +52,36 @@ window.onscroll = () => {
 
 
   /*============ typed js ===============*/
-const typed = new typed('.multiple-text', {
-  strings: ['Desenvolvedora Front-end!' , 'Designer Web!' , 'Designer UI/UX!' ],
-  typedSpeed: 100,
-  backSpeed: 100,
-  backDelay: 100,
-  loop: true
-});
+  const typed = new Typed('.multiple-text', {
+    strings: ['Desenvolvedora Front-end!' , 'Designer Web!' , 'Designer UI/UX!' ],
+    typedSpeed: 100,
+    backSpeed: 100,
+    backDelay: 100,
+    loop: true
+  });
 
 
-/*====== Botão Ler Mais/Menos ======*/
-// var button = document.getElementById('btn');
+  /*====== Botão Ler Mais/Menos ======*/
+  // var button = document.getElementById('btn');
 
-// button.addEventListener('click', function() {
-//   var card = document.querySelector('.about-content',);
-//   card.classList.toggle('active');
+  // button.addEventListener('click', function() {
+  //   var card = document.querySelector('.about-content',);
+  //   card.classList.toggle('active');
 
-//   if (card.classList.contains('active')) {
-//     return button.textContent = 'Ler Menos';
-//   }
+  //   if (card.classList.contains('active')) {
+  //     return button.textContent = 'Ler Menos';
+  //   }
 
-//   button.textContent = 'Ler Mais';
-// });
+  //   button.textContent = 'Ler Mais';
+  // });
 
-/*======== SKILLS =============*/
+  /*======== SKILLS =============*/
 
-// Selecionar a lista de habilidades
-const skillsList = document.querySelector('.skills-lista');
+  // Selecionar a lista de habilidades
+  const skillsList = document.querySelector('.skills-lista');
 
-// Clonar os itens da lista
-const clonedItems = skillsList.cloneNode(true);
+  // Clonar os itens da lista
+  const clonedItems = skillsList.cloneNode(true);
 
-// Adicionar os itens clonados ao final da lista original
-skillsList.appendChild(clonedItems);
+  // Adicionar os itens clonados ao final da lista original
+  skillsList.appendChild(clonedItems);
