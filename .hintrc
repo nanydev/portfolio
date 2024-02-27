@@ -36,6 +36,12 @@
       {
         "duplicate-id": "off"
       }
+    ],
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
     ]
   }
 }
