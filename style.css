@@ -16,7 +16,7 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
-  --main-color: #FF69FF;
+  --main-color: #ff69ff;
 
   /* --gradient: linear-gradient(180deg, #f0f, #0ef); */
 }
@@ -237,44 +237,56 @@ span {
 
 /*============= skills ==========*/
 
-/* Estilos para o contêiner do carrossel */
-.carroussel {
-  overflow: hidden; /* Esconder o conteúdo que ultrapassa os limites do contêiner */
+.skills {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
 }
 
-/* Estilos para a lista de habilidades */
-.skills-lista {
-  display: flex; /* Exibir a lista de habilidades em linha */
-  animation: scroll 20s linear infinite; /* Animação de rolagem infinita */
+.skills:before,
+.skills:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: '';
+  z-index: 2;
 }
 
-/* Animação de rolagem */
-@keyframes scroll {
-  0% {
-      transform: translateX(0); /* Começa na posição inicial */
+.skills:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #1f242d);
+}
+.skills:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #1f242d);}
+
+.skills-slide {
+  display: inline-block;
+  animation: slide 30s infinite linear;
+}
+
+.skills-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-  100% {
-      transform: translateX(-100%); /* Termina na posição final (deslocamento total para a esquerda) */
+  to {
+    transform: translateX(-100%);
   }
 }
-
-/* Estilos para os itens da lista */
-.skills-lista li {
-  margin-right: 20px; /* Espaçamento entre os itens */
-}
-
-/* Estilos para a imagem dos ícones */
-.skills-lista img {
-  width: 30px; /* Tamanho da imagem do ícone */
-  height: 30px;
-  margin-right: 10px; /* Espaçamento à direita */
-}
-
 
 /*============= skills ==========*/
 
-.portfolio-box:last-child {
+.portfolio-box:nth-last-child(1),
+.portfolio-box:nth-last-child(2) {
   cursor: not-allowed;
+  /* filter: blur(3px); Ajuste o valor conforme desejado */
 }
 
 .portfolio {
@@ -395,17 +407,23 @@ span {
   cursor: pointer;
 }
 
-.footer {
+.footer-text {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem 9%;
-  background: var(--second-bg-color);
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100%; /* Define a altura para que o alinhamento vertical funcione */
 }
 
 .footer-text p {
   font-size: 1.6rem;
+}
+
+
+.footer-iconTop {
+  position: fixed;
+  bottom: 2rem; /* Ajuste conforme necessário para definir a distância do fundo da tela */
+  right: 3rem; /* Ajuste conforme necessário para definir a distância da direita da tela */
+  z-index: 999; /* Certifique-se de que o z-index seja maior que os outros elementos, para garantir que o botão fique sobre o conteúdo da página */
 }
 
 .footer-iconTop a {
@@ -425,6 +443,7 @@ span {
   font-size: 2.4rem;
   color: var(--second-bg-color);
 }
+
 
 /* BREAKPOINTS */
 

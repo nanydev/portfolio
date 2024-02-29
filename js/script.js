@@ -77,11 +77,5 @@
 
   /*======== SKILLS =============*/
 
-  // Selecionar a lista de habilidades
-  const skillsList = document.querySelector('.skills-lista');
-
-  // Clonar os itens da lista
-  const clonedItems = skillsList.cloneNode(true);
-
-  // Adicionar os itens clonados ao final da lista original
-  skillsList.appendChild(clonedItems);
+  var copy = document.querySelector(".skills-slide").cloneNode(true)
+  document.querySelector('.skills').appendChild(copy);
